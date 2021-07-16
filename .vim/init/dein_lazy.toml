@@ -1,0 +1,731 @@
+#[[plugins]]
+#repo = 'Shougo/echodoc.vim'
+#on_event = 'CompleteDone'
+#hook_source = '''
+#  let g:echodoc#type = 'virtual'
+#  call echodoc#enable()
+#'''
+
+[[plugins]]
+repo = 'Yggdroot/indentLine'
+on_path = '.*'
+hook_add = '''
+  let g:indentLine_faster = 1
+  let g:indentLine_color_term = 239 "for vim
+  let g:indentLine_color_gui = '#A4E57E' "for gvim
+  let g:indentLine_char = '┊'
+  let g:indentLine_concealcursor = 'niv'
+  let g:indentLine_fileTypeExclude = ['help', 'man']
+'''
+
+[[plugins]]
+repo = 'bkad/CamelCaseMotion'
+on_map = '<Plug>'
+
+[[plugins]]
+repo = 'terryma/vim-expand-region'
+on_map = {x = '<Plug>'}
+hook_add = '''
+  xmap v <Plug>(expand_region_expand)
+  xmap <C-v> <Plug>(expand_region_shrink)
+'''
+
+[[plugins]]
+repo = 'rhysd/committia.vim'
+on_path = 'COMMIT_EDITMSG'
+
+[[plugins]]
+repo = 'Konfekt/FastFold'
+on_path = '.*'
+
+[[plugins]]
+repo = 'tpope/vim-repeat'
+
+[[plugins]]
+repo = 'junegunn/vim-easy-align'
+hook_add = '''
+  xmap ga <Plug>(EasyAlign) " Start interactive EasyAlign in visual mode
+  nmap ga <Plug>(EasyAlign) " Start interactive EasyAlign for text object
+'''
+
+[[plugins]]
+repo = 'rhysd/wandbox-vim'
+on_cmd = 'Wandbox'
+
+[[plugins]]
+repo = 'osyo-manga/vim-over'
+
+[[plugins]]
+repo = 'tmux-plugins/vim-tmux'
+on_ft = 'tmux'
+
+[[plugins]]
+repo = 'osyo-manga/vital-over'
+depends = 'vim-jp/vital.vim'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 't9md/vim-quickhl'
+
+[[plugins]]
+repo = 'mattn/calendar-vim'
+on_cmd = 'Calendar'
+
+[[plugins]]
+repo = 'tpope/vim-dispatch'
+on_cmd = ['Make', 'Dispatch']
+
+[[plugins]]
+repo = 'itchyny/vim-cursorword'
+on_path = '.*'
+
+[[plugins]]
+repo = 'itchyny/vim-highlighturl'
+on_path = '.*'
+
+[[plugins]]
+repo = 'diepm/vim-rest-console'
+on_ft = 'rest'
+
+[[plugins]]
+repo = 'liuchengxu/graphviz.vim'
+on_ft = 'dot'
+on_cmd = ['Graphviz', 'GraphvizCompile']
+
+[[plugins]]
+repo = 'jlanzarotta/bufexplorer'
+
+[[plugins]]
+repo = 'AndrewRadev/inline_edit.vim'
+on_cmd = 'InlineEdit'
+
+[[plugins]]
+repo = 'dhruvasagar/vim-table-mode'
+on_cmd = ['TableModeToggle', 'Tableize', 'TableAddFormula', 'TableEvalFormulaLine', 'TableSort']
+
+[[plugins]]
+repo = 'ConradIrwin/vim-bracketed-paste'
+
+[[plugins]]
+repo = 'bhurlow/vim-parinfer'
+
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+build = 'make'
+
+[[plugins]]
+repo = 'Shougo/context_filetype.vim'
+
+[[plugins]]
+repo = 'equalsraf/neovim-gui-shim'
+
+[[plugins]]
+repo = 'Shougo/junkfile.vim'
+on_source = 'denite.vim'
+hook_add = '''
+  nnoremap <silent> [Window]e :<C-u>Denite junkfile:new junkfile<CR>
+'''
+
+[[plugins]]
+repo = 'Shougo/neco-vim'
+on_ft = ['vim', 'toml']
+
+[[plugins]]
+repo = 'kana/vim-niceblock'
+on_map = {x = '<Plug>'}
+hook_add = '''
+  xmap I  <Plug>(niceblock-I)
+  xmap A  <Plug>(niceblock-A)
+'''
+
+[[plugins]]
+repo = 'vim-jp/vital.vim'
+
+[[plugins]]
+repo = 'thinca/vim-fontzoom'
+on_if = "has('gui_running')"
+on_map = {n = '<Plug>'}
+hook_add = '''
+  nmap + <Plug>(fontzoom-larger)
+  nmap _ <Plug>(fontzoom-smaller)
+'''
+
+[[plugins]]
+repo = 'thinca/vim-qfreplace'
+on_ft = ['qf']
+
+[[plugins]]
+repo = 'thinca/vim-scouter'
+
+[[plugins]]
+repo = 'tyru/caw.vim'
+on_map = {nx = '<Plug>'}
+
+[[plugins]]
+repo = 'tyru/open-browser.vim'
+
+[[plugins]]
+repo = 'rhysd/accelerated-jk'
+on_map = {n = '<Plug>'}
+hook_add = '''
+  nmap <silent>j <Plug>(accelerated_jk_gj)
+  nmap <silent>k <Plug>(accelerated_jk_gk)
+'''
+
+[[plugins]]
+repo = 'rhysd/vim-operator-surround'
+depends = 'vim-operator-user'
+on_map = {n = '<Plug>'}
+hook_add = '''
+  nmap <silent>sa <Plug>(operator-surround-append)a
+  nmap <silent>sd <Plug>(operator-surround-delete)a
+  nmap <silent>sr <Plug>(operator-surround-replace)a
+  nmap <silent>sc <Plug>(operator-surround-replace)a
+'''
+
+[[plugins]]
+repo = 'lambdalisue/vim-findent'
+on_cmd = ['Findent', 'FindentRestore']
+
+[[plugins]]
+repo = 'natebosch/vim-lsc'
+
+[[plugins]]
+repo = 'posva/vim-vue'
+on_ft = 'vue'
+
+[[plugins]]
+repo = 'vim-latex/vim-latex'
+on_ft = 'tex'
+
+[[plugins]]
+repo = 'godlygeek/tabular'
+on_cmd = ['Tab', 'Tabularize']
+
+[[plugins]]
+repo = 'plasticboy/vim-markdown'
+on_ft = 'markdown'
+
+[[plugins]]
+repo = 'vimwiki/vimwiki'
+on_cmd = [
+        'VimwikiIndex',
+        'VimwikiTabIndex',
+        'VimwikiUISelect',
+        'VimwikiDiaryIndex',
+        'VimwikiMakeDiaryNote',
+        'VimwikiMakeYesterdayDiaryNote',
+        'VimwikiFollowLink',
+        'VimwikiGoBackLink',
+        'VimwikiSplitLink',
+        'VimwikiVSplitLink',
+        'VimwikiTabnewLink',
+        'VimwikiNextLink',
+        'VimwikiPrevLink',
+        'VimwikiGoto',
+        'VimwikiDeleteLink',
+        'VimwikiRenameLink',
+        'Vimwiki2HTML',
+        'Vimwiki2HTMLBrowse',
+        'VimwikiAll2HTML',
+        'VimwikiSearch',
+        'VimwikiTable',
+]
+hook_source = '''
+let wiki = {}
+let wiki.path = '~/.vimwiki/'
+let wiki.ext = '.wiki'
+let wiki.syntax = 'markdown'
+let g:vimwiki_list = [wiki]
+let g:vimwiki_use_mouse = 1
+let g:vimwiki_camel_case = 0
+let g:vimwiki_hl_cb_checked = 1
+let g:vimwiki_CJK_length = 1
+'''
+
+[[plugins]]
+repo = 'will133/vim-dirdiff'
+on_cmd = 'DirDiff'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+on_cmd = ['NERDTree', 'NERDTreeToggle']
+hook_add = '''
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+let g:NERDTreeIndicatorMapCustom = {
+      \ "Modified"  : "✹",
+      \ "Staged"    : "✚",
+      \ "Untracked" : "✭",
+      \ "Renamed"   : "➜",
+      \ "Unmerged"  : "═",
+      \ "Deleted"   : "✖",
+      \ "Dirty"     : "✗",
+      \ "Clean"     : "✔︎",
+      \ "Unknown"   : "?"
+      \ }
+'''
+
+[[plugins]]
+repo = 'majutsushi/tagbar'
+on_cmd = 'Tagbar'
+hook_source = '''
+let g:tagbar_sort = 0
+let g:tagbar_autofocus = 1
+let g:tagbar_show_linenumbers = 1
+let g:tagbar_compact = 1
+'''
+
+[[plugins]]
+repo = 'junegunn/gv.vim'
+depends = 'tpope/vim-fugitive'
+on_cmd = 'GV'
+
+[[plugins]]
+repo = 'metakirby5/codi.vim'
+on_cmd = 'Codi'
+
+[[plugins]]
+repo = 'Shougo/deol.nvim'
+on_cmd = 'Deol'
+on_source = 'denite.nvim'
+hook_source = '''
+  let g:deol#prompt_pattern = '\w*%'
+  " Set to $PATH.
+  let s:bin = dein#get('vim-themis').rtp . '/bin'
+  function! s:split_envpath(path) abort
+    let delimiter = has('win32') ? ';' : ':'
+    if stridx(a:path, '\' . delimiter) < 0
+      return split(a:path, delimiter)
+    endif
+    let split = split(a:path, '\\\@<!\%(\\\\\)*\zs' . delimiter)
+    return map(split,'substitute(v:val, ''\\\([\\'
+          \ . delimiter . ']\)'', "\\1", "g")')
+  endfunction
+  function! s:join_envpath(list, orig_path, add_path) abort
+    let delimiter = has('win32') ? ';' : ':'
+    return (stridx(a:orig_path, '\' . delimiter) < 0
+          \ && stridx(a:add_path, delimiter) < 0) ?
+          \   join(a:list, delimiter) :
+          \   join(map(copy(a:list),
+          \        "substitute(v:path, ',\\|\\\\,\\@=', '\\\\\\0', 'g')"),
+          \        delimiter)
+  endfunction
+  let $PATH = s:join_envpath(
+        \ dein#util#_uniq(insert(
+        \    s:split_envpath($PATH), s:bin)), $PATH, s:bin)
+  let $THEMIS_HOME = dein#get('vim-themis').rtp
+  unlet s:bin
+  autocmd FileType deol call s:on_deol()
+  function! s:on_deol() abort
+    nnoremap <buffer><silent> [Space]gc :<C-u>call deol#send('git commit')<CR>
+    nnoremap <buffer><silent> [Space]gA :<C-u>call deol#send('git commit --amend')<CR>
+  endfunction
+'''
+#hook_add = '''
+#  nnoremap <silent> N :<C-u>call deol#new({'command': 'zsh'})<CR>
+#  nnoremap <silent> [Space]s :<C-u>Deol zsh<CR>
+#  nnoremap <silent> [Window]D  :<C-u>call deol#kill_editor()<CR>
+#'''
+
+[[plugins]]
+repo = 'Shougo/vinarise.vim'
+on_cmd = 'Vinarise'
+hook_add = 'let g:vinarise_enable_auto_detect = 1'
+
+[[plugins]]
+repo = 'katono/rogue.vim'
+on_cmd = 'Rogue'
+hook_add  =  '''
+let g:rogue#directory = $CACHE.'/vim-rogue'
+'''
+
+[[plugins]]
+repo = 'wsdjeg/dein-ui.vim'
+on_cmd = 'DeinUpdate'
+
+[[plugins]]
+repo = 'vim-mail/vim-mail'
+on_func = 'mail#client#open'
+
+[[plugins]]
+repo = 'mbbill/undotree'
+on_cmd = 'UndotreeToggle'
+
+[[plugins]]
+repo = 'tpope/vim-dadbod'
+on_cmd = 'DB'
+
+[[plugins]]
+repo = 'vim-pandoc/vim-pandoc-syntax'
+
+[[plugins]]
+repo = 'vim-pandoc/vim-pandoc'
+on_cmd = 'Pandoc'
+
+[[plugins]]
+repo = 'tpope/vim-endwise'
+on_i = 1
+
+[[plugins]]
+repo = 'pangloss/vim-javascript'
+on_ft = 'javascript'
+
+[[plugins]]
+repo = 'keith/swift.vim'
+on_ft = 'swift'
+
+[[plugins]]
+repo = 'dart-lang/dart-vim-plugin'
+on_ft = 'dart'
+
+[[plugins]]
+repo = 'rhysd/vim-llvm'
+on_ft = 'llvm'
+
+[[plugins]]
+repo = 'mitsuse/autocomplete-swift'
+on_ft = 'swift'
+
+[[plugins]]
+repo = 'elzr/vim-json'
+on_ft = 'json'
+
+[[plugins]]
+repo = 'kevinoid/vim-jsonc'
+on_ft = 'jsonc'
+
+[[plugins]]
+repo = 'rhysd/vim-wasm'
+on_ft = 'wast'
+
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
+on_ft = 'typescript'
+
+[[plugins]]
+repo = 'mhartington/nvim-typescript'
+on_if = "has('nvim')"
+on_ft = 'typescript'
+
+[[plugins]]
+repo = 'fatih/vim-go'
+on_ft = 'go'
+hook_add = '''
+let g:go_bin_path = expand('~/.go/bin')
+let g:go_disable_autoinstall = 0
+
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_fmt_command = "goimports"
+let g:go_fmt_fail_silently = 1
+let g:go_get_update = 0 " Disable updating dependencies
+let g:go_snippet_engine = 'neosnippet'
+'''
+
+[[plugins]]
+repo = 'nsf/gocode'
+rtp = 'vim'
+on_ft = 'go'
+
+[[plugins]]
+repo = 'rust-lang/rust.vim'
+on_ft = 'rust'
+hook_source = 'let g:rustfmt_autosave = 0'
+
+[[plugins]]
+repo = 'racer-rust/vim-racer'
+on_ft = 'rust'
+
+[[plugins]]
+repo = 'rhysd/rust-doc.vim'
+on_ft = 'rust'
+
+[[plugins]]
+repo = 'rhysd/vim-gfm-syntax'
+on_ft = 'markdown'
+
+[[plugins]]
+repo = 'machakann/vim-vimhelplint'
+on_ft = 'help'
+
+[[plugins]]
+repo = 'chrisbra/vim-zsh'
+on_ft = 'zsh'
+
+[[plugins]]
+repo = 'kana/vim-filetype-haskell'
+on_ft = 'haskell'
+
+[[plugins]]
+repo = 'itchyny/vim-haskell-indent'
+on_ft = 'haskell'
+
+[[plugins]]
+repo = 'udalov/kotlin-vim'
+on_ft = 'kotlin'
+
+[[plugins]]
+repo = 'shawncplus/phpcomplete.vim'
+on_ft = 'php'
+
+[[plugins]]
+repo = 'hynek/vim-python-pep8-indent'
+on_ft = 'python'
+
+[[plugins]]
+repo = 'JesseKPhillips/d.vim'
+on_ft = 'd'
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
+
+[[plugins]]
+repo = 'vim-ruby/vim-ruby'
+on_ft = 'ruby'
+
+[[plugins]]
+repo = 'rhysd/vim-textobj-ruby'
+on_ft = 'ruby'
+
+[[plugins]]
+repo = 'kchmck/vim-coffee-script'
+on_ft = 'coffee'
+
+[[plugins]]
+repo = 'vim-jp/vim-cpp'
+on_ft = 'cpp'
+
+[[plugins]]
+repo = 'octol/vim-cpp-enhanced-highlight'
+on_ft = 'cpp'
+
+#[[plugins]]
+#repo = 'justmao945/vim-clang'
+#on_ft = ['c', 'cpp', 'objc']
+
+[[plugins]]
+repo = 'cjxgm/vimlight'
+on_ft = ['c', 'cpp']
+
+[[plugins]]
+repo = 'rhysd/vim-crystal'
+on_ft = 'crystal'
+
+[[plugins]]
+repo = 'chrisbra/csv.vim'
+on_ft = 'csv'
+
+[[plugins]]
+repo = 'vim-erlang/vim-erlang-runtime'
+on_ft = 'erlang'
+
+[[plugins]]
+repo = 'vim-erlang/vim-erlang-omnicomplete'
+on_ft = 'erlang'
+
+[[plugins]]
+repo = 'vim-erlang/vim-erlang-compiler'
+on_ft = 'erlang'
+
+[[plugins]]
+repo = 'vim-erlang/vim-erlang-tags'
+on_ft = 'erlang'
+on_cmd = 'ErlangTags'
+
+[[plugins]]
+repo = 'elixir-lang/vim-elixir'
+on_ft = 'elixir'
+
+[[plugins]]
+repo = 'awetzel/elixir.nvim'
+depends = 'vim-elixir'
+disabled = '!has("nvim")'
+on_ft = 'elixir'
+
+[[plugins]]
+repo = 'pilu/vimux-elixir'
+depends = 'benmills/vimux'
+on_ft = 'elixir'
+
+[[plugins]]
+repo = 'dag/vim-fish'
+on_ft = 'fish'
+
+[[plugins]]
+repo = 'raichoo/haskell-vim'
+on_ft = 'haskell'
+
+[[plugins]]
+repo = 'vim-jp/vim-java'
+on_ft = 'java'
+
+[[plugins]]
+repo = 'artur-shaik/vim-javacomplete2'
+on_ft = 'java'
+
+[[plugins]]
+repo = 'google/vim-jsonnet'
+on_ft = 'jsonnet'
+
+[[plugins]]
+repo = 'lfex/vim-lfe'
+on_ft = 'lfe'
+
+[[plugins]]
+repo = 'tbastos/vim-lua'
+on_ft = 'lua'
+
+[[plugins]]
+repo = 'WolfgangMehner/lua-support'
+on_ft = 'lua'
+
+[[plugins]]
+repo = 'zah/nimrod.vim'
+on_ft = 'nim'
+
+[[plugins]]
+repo = 'davidhalter/jedi-vim'
+on_ft = 'python'
+
+[[plugins]]
+repo = 'python-mode/python-mode'
+on_ft = 'python'
+hook_add = '''
+let g:pymode_python = 'python3'
+'''
+
+[[plugins]]
+repo = 'tpope/vim-rbenv'
+on_ft = 'ruby'
+
+[[plugins]]
+repo = 'todesking/ruby_hl_lvar.vim'
+on_ft = 'ruby'
+
+[[plugins]]
+repo = 'tpope/vim-bundler'
+on_ft = 'ruby'
+
+[[plugins]]
+repo = 'tpope/vim-rails'
+on_cmd = 'Rails'
+on_ft = 'ruby'
+
+[[plugins]]
+repo = 'tpope/vim-rake'
+on_cmd = 'Rake'
+on_ft = 'ruby'
+
+[[plugins]]
+repo = 'osyo-manga/vim-monster'
+on_ft = 'ruby'
+hook_add = 'let g:monster#completion#rcodetools#backend = "async_rct_complete"'
+
+[[plugins]]
+repo = 'chrisbra/vim-sh-indent'
+on_ft = 'sh'
+
+[[plugins]]
+repo = 'clojure-vim/async-clj-highlight'
+on_ft = 'clojure'
+
+[[plugins]]
+repo = 'clojure-vim/async-clj-omni'
+on_ft = 'clojure'
+
+[[plugins]]
+repo = 'ludovicchabant/vim-gutentags'
+hook_add = '''
+let g:gutentags_project_root = ['.git', '.root', '.project']
+let g:gutentags_ctags_tagfile = '.tags'
+let g:gutentags_cache_dir = expand('~/.cache/tags')
+'''
+
+[[plugins]]
+repo = 'mhinz/vim-signify'
+
+#[[plugins]]
+#repo = 'mattn/vim-lsp-settings'
+#on_cmd = 'LspInstallServer'
+#
+#[[plugins]]
+#repo = 'lighttiger2505/deoplete-vim-lsp'
+#on_ft = 'vim'
+
+[[plugins]]
+repo = 'Shougo/neoinclude.vim'
+on_ft = ['c', 'cpp']
+
+[[plugins]]
+repo = 'jsfaint/coc-neoinclude'
+on_ft = ['c', 'cpp']
+
+#[[plugins]]
+#repo = 'zchee/deoplete-clang'
+#on_ft = ['c', 'cpp']
+
+#[[plugins]]
+#repo = 'deoplete-plugins/deoplete-zsh'
+#on_ft = 'zsh'
+
+[[plugins]]
+repo = 'chrisbra/NrrwRgn'
+on_cmd = ['NR', 'NW', 'WR', 'NRV', 'NUD', 'NRP']
+
+[[plugins]]
+repo = 'tpope/vim-speeddating'
+on_cmd = 'SpeedDatingFormat'
+
+[[plugins]]
+repo = 'jceb/vim-orgmode'
+depends = 'vim-speeddating'
+on_ft = 'org'
+
+#[[plugins]]
+#repo = 'Shougo/defx.nvim'
+#on_cmd = 'Defx'
+
+[[plugins]]
+repo = 'lambdalisue/fern.vim'
+on_cmd = 'Fern'
+
+[[plugins]]
+repo = 'voldikss/vim-floaterm'
+on_cmd = ['FloatermNew', 'FloatermPrev', 'FloatermNext', 'FloatermToggle']
+
+#[[plugins]]
+#repo = 'dense-analysis/ale'
+#on_cmd = 'ALEEnable'
+#on_event = ['BufWritePre']
+#hook_add = '''
+#  let g:ale_sign_error = '✖'
+#  let g:ale_sign_warning = '➤'
+#  let g:ale_disable_lsp = 1 " for coc's lsp
+#'''
+
+[[plugins]]
+repo = 'voldikss/vim-translator'
+on_cmd = ['Translate', 'TranslateW']
+
+[[plugins]]
+repo = 'vlime/vlime'
+on_ft = 'lisp'
+
+[[plugins]]
+repo = 'vim-test/vim-test'
+on_cmd = ['TestFile', 'TestSuite']
+
+[[plugins]]
+repo = 'habamax/vim-godot'
+on_cmd = ['GodotRun', 'GodotRunCurrent']
+
+[[plugins]]
+repo = 'neoclide/jsonc.vim'
+on_ft = 'jsonc'

@@ -1,0 +1,104 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+#[[plugins]]
+#repo = 'junegunn/vim-plug'
+
+[[plugins]]
+repo = 'kana/vim-operator-user'
+
+[[plugins]]
+repo = 'kana/vim-textobj-user'
+
+[[plugins]]
+repo = 'kana/vim-textobj-entire'
+
+[[plugins]]
+repo = 'kana/vim-textobj-function'
+
+[[plugins]]
+repo = 'roxma/vim-hug-neovim-rpc'
+on_if = "!has('nvim')"
+
+[[plugins]]
+repo = 'roxma/nvim-yarp'
+depends = 'vim-hug-neovim-rpc'
+on_if = "!has('nvim')"
+
+[[plugins]]
+repo = 'luochen1990/rainbow'
+hook_add = 'let g:rainbow_active = 1'
+
+## deoplete
+#[[plugins]]
+#repo = 'Shougo/deoplete.nvim'
+#depends = 'context_filetype.vim'
+#on_event = 'InsertEnter'
+#hook_source = '''
+#  source ~/.vim/init/plugins/deoplete.vim
+#  call deoplete#enable()
+#'''
+
+## asyncomplete
+#[[plugins]]
+#repo = 'prabirshrestha/async.vim'
+#
+#[[plugins]]
+#repo = 'prabirshrestha/asyncomplete.vim'
+#on_event = 'InsertEnter'
+#hook_source = '''
+#inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+#inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+#
+#" allow modifying the completeopt variable, or it will
+#" be overridden all the time
+#let g:asyncomplete_auto_completeopt = 0
+#
+#set completeopt=menuone,noinsert,noselect,preview
+#autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+#'''
+#
+#[[plugins]]
+#repo = 'prabirshrestha/vim-lsp'
+
+## coc
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+on_i = 1
+merged = 0
+hook_source = 'source $INIT_PATH/plugins/coc.vim'
+
+[[plugins]]
+repo = 'jiangmiao/auto-pairs'
+
+[[plugins]]
+repo = 'mg979/vim-visual-multi'
+
+## status line
+#[[plugins]]
+#repo = 'vim-airline/vim-airline'
+#hook_add = '''
+#let g:airline_powerline_fonts = has('gui_running') ? 1 : 0
+#let g:ariline#extensions#tabline#enabled = 1 " enable the extension
+#'''
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+
+## theme
+[[plugins]]
+repo = 'tomasr/molokai'
+
+[[plugins]]
+repo = 'fmoralesc/molokayo'
+depends = 'molokai'
+
+[[plugins]]
+repo = 'wojciechkepka/vim-github-dark'
+
+[[plugins]]
+repo = 'liuchengxu/space-vim-dark'
+hook_add = '''
+  colorscheme space-vim-dark
+'''
+
