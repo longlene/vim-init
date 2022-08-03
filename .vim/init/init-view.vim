@@ -26,11 +26,11 @@ else
 endif
 
 set ttyfast
+set lazyredraw
 if !has('nvim')
   set ttyscroll=3 " speedup scrolling
   set ttymouse=xterm2
 endif
-set lazyredraw
 
 set display=lastline 
 

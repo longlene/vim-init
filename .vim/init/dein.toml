@@ -74,14 +74,10 @@ repo = 'jiangmiao/auto-pairs'
 [[plugins]]
 repo = 'mg979/vim-visual-multi'
 
-## status line
 #[[plugins]]
-#repo = 'vim-airline/vim-airline'
-#hook_add = '''
-#let g:airline_powerline_fonts = has('gui_running') ? 1 : 0
-#let g:ariline#extensions#tabline#enabled = 1 " enable the extension
-#'''
+#repo = 'andymass/vim-matchup'
 
+## status line
 [[plugins]]
 repo = 'itchyny/lightline.vim'
 
@@ -95,6 +91,12 @@ depends = 'molokai'
 
 [[plugins]]
 repo = 'wojciechkepka/vim-github-dark'
+
+[[plugins]]
+repo = 'ayu-theme/ayu-vim'
+
+[[plugins]]
+repo = 'joshdick/onedark.vim'
 
 [[plugins]]
 repo = 'liuchengxu/space-vim-dark'

@@ -281,7 +281,7 @@ let g:tagbar_compact = 1
 [[plugins]]
 repo = 'junegunn/gv.vim'
 depends = 'tpope/vim-fugitive'
-on_cmd = 'GV'
+on_cmd = ['GV', 'GV!', 'GV?']
 
 [[plugins]]
 repo = 'metakirby5/codi.vim'
@@ -506,10 +506,6 @@ on_ft = 'cpp'
 repo = 'octol/vim-cpp-enhanced-highlight'
 on_ft = 'cpp'
 
-#[[plugins]]
-#repo = 'justmao945/vim-clang'
-#on_ft = ['c', 'cpp', 'objc']
-
 [[plugins]]
 repo = 'cjxgm/vimlight'
 on_ft = ['c', 'cpp']
@@ -700,15 +696,16 @@ on_cmd = 'Fern'
 repo = 'voldikss/vim-floaterm'
 on_cmd = ['FloatermNew', 'FloatermPrev', 'FloatermNext', 'FloatermToggle']
 
-#[[plugins]]
-#repo = 'dense-analysis/ale'
-#on_cmd = 'ALEEnable'
-#on_event = ['BufWritePre']
-#hook_add = '''
-#  let g:ale_sign_error = '✖'
-#  let g:ale_sign_warning = '➤'
-#  let g:ale_disable_lsp = 1 " for coc's lsp
-#'''
+[[plugins]]
+repo = 'dense-analysis/ale'
+on_cmd = 'ALEEnable'
+on_event = ['BufWritePre']
+hook_add = '''
+  let g:ale_sign_error = '✖'
+  "let g:ale_sign_warning = '➤'
+  let g:ale_sign_warning = '⚠'
+  let g:ale_disable_lsp = 1 " for coc's lsp
+'''
 
 [[plugins]]
 repo = 'voldikss/vim-translator'
@@ -729,3 +726,24 @@ on_cmd = ['GodotRun', 'GodotRunCurrent']
 [[plugins]]
 repo = 'neoclide/jsonc.vim'
 on_ft = 'jsonc'
+
+[[plugins]]
+repo = 'alvan/vim-closetag'
+on_ft = ['html', 'xml']
+
+[[plugins]]
+repo = 'liuchengxu/vista.vim'
+on_cmd = ['Vista', 'Vista!', 'Vista!!']
+
+[[plugins]]
+repo = 'skywind3000/asyncrun.vim'
+on_cmd = 'AsyncRun'
+
+[[plugins]]
+repo = 'skywind3000/asynctasks.vim'
+on_cmd = 'AsyncTask'
+depends = 'vim-jp/vital.vim'
+
+[[plugins]]
+repo = 'hashivim/vim-terraform'
+on_cmd = 'Terraform'

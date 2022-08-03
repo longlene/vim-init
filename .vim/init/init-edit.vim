@@ -1,5 +1,5 @@
+set history=3000 " history size
 set autoread " auto read when file changed
-
 set smarttab " Smart insert tab setting
 set expandtab " use spaces instead of tabs
 
@@ -11,15 +11,13 @@ set wildignore+=*.o,*.py[co],*.fasl,*.so,*.png,*.pdf,*.dylib,*.class,*.swp
 
 set modeline " Set Vim local buffer option to specific file
 
+set matchpairs+=<:> " match pairs
 set showmatch " show matching brackets when text indicator is over them
 setglobal cpoptions-=m
-set matchpairs+=<:> " match pairs
 
 set nobackup  " no backup by default
 
-set incsearch " Incremental searching
-set smartcase " Override the ignorecase option if the pattern contains upper case
-set hlsearch " highlight search result
+set incsearch ignorecase smartcase hlsearch
 
 set backspace=indent,eol,start
 
@@ -27,8 +25,6 @@ if exists('*FoldCCtext')
   " Use FoldCCtext()
   setglobal foldtext=FoldCCtext()
 endif
-
-set history=3000 " history size
 
 "" ctags: tag files, non necessary for costing too much time to cache
 set tags+=./tags,./../tags
@@ -40,3 +36,5 @@ if (!has('nvim') || $DISPLAY != '') && has('clipboard')
     set clipboard& clipboard+=unnamed
   endif
 endif
+
+set diffopt+=algorithm:patience

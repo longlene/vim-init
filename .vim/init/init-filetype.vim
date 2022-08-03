@@ -12,6 +12,7 @@ autocmd BufNewFile,BufRead *.c set shiftwidth=8
 autocmd BufNewFile,BufRead *.h set shiftwidth=8 cinoptions=g0
 autocmd BufNewFile,BufRead *.cpp set cinoptions=g0
 autocmd BufNewFile,BufRead *.erl set shiftwidth=4
+autocmd BufNewFile,BufRead *.el set shiftwidth=4
 
 autocmd FileType gitcommit,qfreplace setlocal nofoldenable
 autocmd FileType javascript setlocal nocindent

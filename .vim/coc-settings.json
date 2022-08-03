@@ -1,6 +1,13 @@
 {
-        //"diagnostic.displayByAle": true
+        "diagnostic.displayByAle": true,
         "codeLens.enable":true,
         "diagnostic.errorSign":"✖",
-        "diagnostic.warningSign":"➤"
+        "diagnostic.warningSign":"⚠",
+        //"languageserver": {
+        //        "erlang": {
+        //                "command": "erlang_ls",
+        //                "filetypes": ["erlang"]
+        //        }
+        //}
+        "rust-analyzer.server.path": "/usr/local/bin/rust-analyzer"
 }
