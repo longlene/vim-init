@@ -1,0 +1,25 @@
+{
+        // color
+        "colors.enable": true,
+        "semanticTokens.enable": true,
+        // codeLens
+        "codeLens.enable": true,
+        // diagnostic
+        "diagnostic.displayByAle": true,
+        "diagnostic.errorSign":"✖",
+        "diagnostic.warningSign":"⚠",
+        // snippets
+        "snippets.priority":-10,
+        "snippets.ultisnips.pythonPrompt": false,
+
+        "workspace.rootPatterns": [
+                ".git",
+                "Makefile",
+                "CMakeLists.txt",
+                "rebar.config",
+                "Cargo.toml"
+        ],
+        "clangd.checkUpdates": false,
+        "json.schemaDownload.enable": false,
+        "rust-analyzer.server.path": "/usr/bin/rust-analyzer"
+}

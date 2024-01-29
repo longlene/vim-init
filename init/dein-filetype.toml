@@ -1,0 +1,91 @@
+hook_add = '''
+augroup InitAutoCmd
+  autocmd!
+  autocmd FileType,Syntax,BufNewFile,BufNew,BufRead *? call init#filetype()
+augroup END
+
+if !has('nvim')
+  autocmd InitAutoCmd CursorHold */init/*.toml call dein#toml#syntax()
+endif
+
+" Update filetype.
+autocmd InitAutoCmd BufWritePost * nested
+\ if &l:filetype ==# '' || exists('b:ftdetect')
+\ |   unlet! b:ftdetect
+\ |   filetype detect
+\ | endif
+'''
+
+[ftplugin]
+_ = '''
+  " Disable automatically insert comment.
+  setl formatoptions-=ro
+  setl formatoptions+=mMBl
+
+  " Disable auto wrap.
+  if &l:textwidth != 70 && &filetype !=# 'help'
+    setlocal textwidth=0
+  endif
+
+  " Use FoldCCtext().
+  if &filetype !=# 'help'
+    setlocal foldtext=FoldCCtext()
+  endif
+
+  if !&l:modifiable
+    setlocal nofoldenable
+    setlocal foldcolumn=0
+    setlocal colorcolumn=
+  endif
+'''
+
+c = 'setlocal shiftwidth=8'
+cpp = 'setlocal cinoptions=g0'
+erlang = 'setlocal expandtab shiftwidth=4'
+
+go = '''
+  highlight default link goErr WarningMsg
+  match goErr /\<err\>/
+'''
+
+help = '''
+  setlocal iskeyword+=:
+  setlocal iskeyword+=#
+  setlocal iskeyword+=-
+'''
+
+html = '''
+  setlocal includeexpr=substitute(v:fname,'^\\/','','')
+  setlocal path+=./;/
+'''
+lisp = 'setlocal shiftwidth=2'
+makefile = 'setlocal noexpandtab'
+
+python = '''
+" Indent settings.
+  setlocal foldmethod=indent
+  setlocal softtabstop=4
+  setlocal shiftwidth=4
+  setlocal textwidth=80
+  setlocal smarttab
+  setlocal expandtab
+  setlocal nosmartindent
+'''
+
+ruby = '''
+  setlocal iskeyword+=!
+  setlocal iskeyword+=?
+  setlocal omnifunc=
+  setlocal shiftwidth=2 softtabstop=2 tabstop=2
+'''
+
+typescript = 'setlocal shiftwidth=2'
+
+vim = '''
+  setlocal shiftwidth=2 softtabstop=2
+  setlocal iskeyword+=:,#
+  setlocal indentkeys+=\\,endif,endfunction,endfor,endwhile,endtry
+'''
+
+zsh = 'setlocal shiftwidth=4'
+

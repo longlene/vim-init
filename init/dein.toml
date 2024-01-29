@@ -1,0 +1,104 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+#[[plugins]]
+#repo = 'junegunn/vim-plug'
+
+[[plugins]]
+repo = 'tani/vim-artemis'
+
+[[plugins]]
+repo = 'kana/vim-operator-user'
+
+[[plugins]]
+repo = 'roxma/vim-hug-neovim-rpc'
+on_func = 'neovim_rpc'
+on_if = "!has('nvim')"
+
+[[plugins]]
+repo = 'roxma/nvim-yarp'
+on_func = 'yarp'
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+
+## coc
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+merged = 0
+rev = 'release'
+on_i = 1
+hooks_file = "$INIT_DIR/plugin/coc.vim"
+
+### asyncomplete
+#[[plugins]]
+#repo = 'prabirshrestha/async.vim'
+#
+#[[plugins]]
+#repo = 'prabirshrestha/asyncomplete.vim'
+#on_event = 'InsertEnter'
+#hooks_file = "$INIT_DIR/plugin/asyncomplete.vim"
+#
+#[[plugins]]
+#repo = 'prabirshrestha/asyncomplete-lsp.vim'
+#
+#[[plugins]]
+#repo = 'prabirshrestha/vim-lsp'
+#
+#[[plugins]]
+#repo = 'prabirshrestha/asyncomplete-buffer.vim'
+
+[[plugins]]
+repo = 'honza/vim-snippets'
+
+[[plugins]]
+repo = 'mg979/vim-visual-multi'
+
+[[plugins]]
+repo = 'andymass/vim-matchup'
+
+[[plugins]]
+repo = 'lambdalisue/fern.vim'
+on_cmd = 'Fern'
+[plugins.ftplugin]
+fern = 'setlocal nonumber'
+
+[[plugins]]
+repo = 'lambdalisue/fern-hijack.vim'
+
+[[plugins]]
+repo = 'yuki-yano/fern-preview.vim'
+depends = ['fern.vim']
+[plugins.ftplugin]
+fern = '''
+  nmap <silent> <buffer> p     <Plug>(fern-action-preview:toggle)
+  nmap <silent> <buffer> <C-p> <Plug>(fern-action-preview:auto:toggle)
+  nmap <silent> <buffer> <C-d> <Plug>(fern-action-preview:scroll:down:half)
+  nmap <silent> <buffer> <C-u> <Plug>(fern-action-preview:scroll:up:half)
+'''
+
+[[plugins]]
+repo = 'vim-jp/vital.vim'
+merged = 0
+
+#[[plugins]]
+#repo = 'guns/vim-sexp'
+
+# additional configuration for vim
+[[plugins]]
+repo = 'tpope/vim-sensible'
+
+## status line
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+hooks_file = "$INIT_DIR/plugin/lightline.lua"
+#hooks_file = "$INIT_DIR/plugin/lightline.vim"
+
+## theme
+[[plugins]]
+repo = 'tomasiser/vim-code-dark'
+
+[[plugins]]
+repo = 'liuchengxu/space-vim-dark'
+hook_add = 'colorscheme space-vim-dark'
+

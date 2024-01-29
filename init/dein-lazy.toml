@@ -1,0 +1,682 @@
+[[plugins]]
+repo = 'haya14busa/dein-command.vim'
+on_cmd = 'Dein'
+
+[[plugins]]
+repo = 'wsdjeg/dein-ui.vim'
+on_cmd = 'DeinUpdate'
+
+# A more adventurous wildmenu
+[[plugins]]
+repo = 'gelguy/wilder.nvim'
+on_event = 'CmdlineEnter'
+hooks_file = "$INIT_DIR/plugin/wilder.lua"
+
+[[plugins]]
+repo = 'kana/vim-textobj-user'
+
+[[plugins]]
+repo = 'kana/vim-textobj-entire'
+depends = 'vim-textobj-user'
+on_map = {'ox' = '<Plug>(textobj-entire'}
+
+[[plugins]]
+repo = 'kana/vim-textobj-line'
+depends = 'vim-textobj-user'
+on_map = {'ox' = '<Plug>(textobj-line'}
+
+[[plugins]]
+repo = 'preservim/vim-textobj-quote'
+depends = 'vim-textobj-user'
+on_map = {'ox' = '<Plug>(textobj-quote'}
+
+# Auto close parentheses
+[[plugins]]
+repo = 'cohama/lexima.vim'
+on_event = 'InsertEnter'
+
+[[plugins]]
+repo = 'Yggdroot/indentLine'
+on_event = 'BufReadPost'
+hooks_file = "$INIT_DIR/plugin/indentline.vim"
+
+[[plugins]]
+repo = 'bfrg/vim-cpp-modern'
+on_ft = 'cpp'
+
+[[plugins]]
+repo = 'dkarter/bullets.vim'
+on_ft = ['markdown', 'gitcommit']
+
+[[plugins]]
+repo = 'terryma/vim-expand-region'
+on_map = {x = '<Plug>'}
+hook_add = '''
+  xmap v <Plug>(expand_region_expand)
+  xmap <C-v> <Plug>(expand_region_shrink)
+'''
+
+[[plugins]]
+repo = 'rhysd/committia.vim'
+on_path = 'COMMIT_EDITMSG'
+
+[[plugins]]
+repo = 'Konfekt/FastFold'
+on_path = '.*'
+
+#[[plugins]]
+#repo = 'lambdalisue/fern-mapping-project-top.vim'
+#on_ft = 'fern'
+#hook_source = '''
+#  nmap <buffer><silent> ^ <Plug>(fern-action-project-top)
+#'''
+
+[[plugins]]
+repo = 'lambdalisue/vim-protocol'
+on_path = '^https\?://'
+
+[[plugins]]
+repo = 'tpope/vim-repeat'
+on_map = '.'
+
+[[plugins]]
+repo = 'junegunn/vim-easy-align'
+hook_add = '''
+  xmap ga <Plug>(EasyAlign) " Start interactive EasyAlign in visual mode
+  nmap ga <Plug>(EasyAlign) " Start interactive EasyAlign for text object
+'''
+
+[[plugins]]
+repo = 'osyo-manga/vim-over'
+on_cmd = 'OverCommandLine'
+
+[[plugins]]
+repo = 'tmux-plugins/vim-tmux'
+on_ft = 'tmux'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+on_cmd = 'Git'
+
+[[plugins]]
+repo = 'rbong/vim-flog'
+depends = 'vim-fugitive'
+on_cmd = ['Flog', 'FlogSplit']
+
+[[plugins]]
+#repo = 'mattn/calendar-vim'
+repo = 'itchyny/calendar.vim'
+on_cmd = 'Calendar'
+
+[[plugins]]
+repo = 'tpope/vim-dispatch'
+on_cmd = ['Make', 'Dispatch']
+
+[[plugins]]
+repo = 'itchyny/vim-cursorword'
+on_path = '.*'
+
+[[plugins]]
+repo = 'itchyny/vim-highlighturl'
+on_path = '.*'
+
+[[plugins]]
+repo = 'Shirk/vim-gas'
+on_ft = 'gas'
+
+[[plugins]]
+repo = 'liuchengxu/graphviz.vim'
+on_ft = 'dot'
+on_cmd = ['Graphviz', 'GraphvizCompile']
+
+[[plugins]]
+repo = 'jlanzarotta/bufexplorer'
+on_cmd = ['BufExplorer', 'BufExplorerHorizontalSplit', 'BufExplorerVerticalSplit']
+
+[[plugins]]
+repo = 'dhruvasagar/vim-table-mode'
+on_cmd = ['TableModeToggle', 'Tableize', 'TableAddFormula', 'TableEvalFormulaLine', 'TableSort']
+
+#[[plugins]]
+#repo = 'bhurlow/vim-parinfer'
+#on_ft = 'lisp'
+
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+on_func = 'vimproc'
+build = 'make'
+
+[[plugins]]
+repo = 'Shougo/context_filetype.vim'
+hook_source = '''
+  let g:context_filetype#ignore_patterns = {'toml':['^\s*#\s*']}
+'''
+
+[[plugins]]
+repo = 'equalsraf/neovim-gui-shim'
+
+[[plugins]]
+repo = 'Shougo/junkfile.vim'
+on_cmd = 'JunkfileOpen'
+
+[[plugins]]
+repo = 'kana/vim-niceblock'
+on_map = {x = '<Plug>'}
+hook_add = '''
+  xmap I  <Plug>(niceblock-I)
+  xmap A  <Plug>(niceblock-A)
+'''
+
+[[plugins]]
+repo = 'thinca/vim-fontzoom'
+on_if = "has('gui_running')"
+on_map = {n = '<Plug>'}
+hook_add = '''
+  nmap + <Plug>(fontzoom-larger)
+  nmap _ <Plug>(fontzoom-smaller)
+'''
+
+[[plugins]]
+repo = 'thinca/vim-qfreplace'
+on_ft = ['qf']
+
+[[plugins]]
+repo = 'thinca/vim-scouter'
+
+[[plugins]]
+repo = 'tyru/caw.vim'
+on_map = {nx = '<Plug>'}
+
+[[plugins]]
+repo = 'tyru/open-browser.vim'
+on_cmd = ['OpenBrowser', 'OpenBrowserSearch', 'OpenBrowserSmartSearch']
+
+[[plugins]]
+repo = 'rhysd/accelerated-jk'
+on_map = {n = '<Plug>'}
+hook_add = '''
+  nmap j <Plug>(accelerated_jk_gj)
+  nmap k <Plug>(accelerated_jk_gk)
+'''
+
+[[plugins]]
+repo = 'rhysd/vim-operator-surround'
+depends = 'vim-operator-user'
+on_map = {n = '<Plug>'}
+hook_add = '''
+  nmap <silent>sa <Plug>(operator-surround-append)a
+  nmap <silent>sd <Plug>(operator-surround-delete)a
+  nmap <silent>sr <Plug>(operator-surround-replace)a
+  nmap <silent>sc <Plug>(operator-surround-replace)a
+'''
+
+[[plugins]]
+repo = 'lambdalisue/vim-findent'
+on_cmd = ['Findent', 'FindentRestore']
+
+[[plugins]]
+repo = 'natebosch/vim-lsc'
+
+[[plugins]]
+repo = 'vim-jp/syntax-vim-ex'
+on_ft = 'vim'
+
+[[plugins]]
+repo = 'rbtnn/vim-vimscript_indentexpr'
+on_ft = 'vim'
+
+[[plugins]]
+repo = 'posva/vim-vue'
+on_ft = 'vue'
+
+[[plugins]]
+repo = 'vim-latex/vim-latex'
+on_ft = 'tex'
+
+[[plugins]]
+repo = 'vimwiki/vimwiki'
+on_cmd = [
+  'VimwikiIndex',
+  'VimwikiTabIndex',
+  'VimwikiUISelect',
+  'VimwikiDiaryIndex',
+  'VimwikiMakeDiaryNote',
+  'VimwikiMakeYesterdayDiaryNote',
+  'VimwikiFollowLink',
+  'VimwikiGoBackLink',
+  'VimwikiSplitLink',
+  'VimwikiVSplitLink',
+  'VimwikiTabnewLink',
+  'VimwikiNextLink',
+  'VimwikiPrevLink',
+  'VimwikiGoto',
+  'VimwikiDeleteLink',
+  'VimwikiRenameLink',
+  'Vimwiki2HTML',
+  'Vimwiki2HTMLBrowse',
+  'VimwikiAll2HTML',
+  'VimwikiSearch',
+  'VimwikiTable',
+  ]
+hooks_file = "$INIT_DIR/plugin/vimwiki.lua"
+
+[[plugins]]
+repo = 'will133/vim-dirdiff'
+on_cmd = 'DirDiff'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+on_cmd = ['NERDTree', 'NERDTreeToggle']
+hooks_file = "$INIT_DIR/plugin/nerdtree.lua"
+
+[[plugins]]
+repo = 'majutsushi/tagbar'
+on_cmd = 'Tagbar'
+hook_source = '''
+  let g:tagbar_sort = 0
+  let g:tagbar_autofocus = 1
+  let g:tagbar_show_linenumbers = 1
+  let g:tagbar_compact = 1
+'''
+
+[[plugins]]
+repo = 'junegunn/gv.vim'
+depends = 'tpope/vim-fugitive'
+on_cmd = ['GV', 'GV!', 'GV?']
+
+[[plugins]]
+repo = 'metakirby5/codi.vim'
+on_cmd = ['Codi', 'Codi!']
+
+[[plugins]]
+repo = 'Shougo/vinarise.vim'
+on_cmd = 'Vinarise'
+hook_add = 'let g:vinarise_enable_auto_detect = 1'
+
+[[plugins]]
+repo = 'katono/rogue.vim'
+on_cmd = ['Rogue', 'RogueRestore', 'RogueResume', 'RogueScores']
+hook_add  =  '''
+  let g:rogue#directory = '~/.cache/vim-rogue'
+'''
+
+[[plugins]]
+repo = 'vim-mail/vim-mail'
+on_func = 'mail#client#open'
+
+[[plugins]]
+repo = 'mbbill/undotree'
+on_cmd = 'UndotreeToggle'
+
+[[plugins]]
+repo = 'tpope/vim-dadbod'
+on_cmd = 'DB'
+
+[[plugins]]
+repo = 'kristijanhusak/vim-dadbod-ui'
+on_cmd = ['DBUI']
+
+[[plugins]]
+repo = 'vim-pandoc/vim-pandoc-syntax'
+on_ft = 'pandoc'
+
+[[plugins]]
+repo = 'vim-pandoc/vim-pandoc'
+on_cmd = 'Pandoc'
+hook_add = 'let g:pandoc#filetypes#pandoc_markdown = 0'
+
+#[[plugins]]
+#repo = 'tpope/vim-endwise'
+#on_i = 1
+
+[[plugins]]
+repo = 'pangloss/vim-javascript'
+on_ft = 'javascript'
+
+[[plugins]]
+repo = 'keith/swift.vim'
+on_ft = 'swift'
+
+[[plugins]]
+repo = 'dart-lang/dart-vim-plugin'
+on_ft = 'dart'
+
+[[plugins]]
+repo = 'rhysd/vim-llvm'
+on_ft = 'llvm'
+
+[[plugins]]
+repo = 'elzr/vim-json'
+on_ft = 'json'
+
+[[plugins]]
+repo = 'rhysd/vim-wasm'
+on_ft = 'wast'
+
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
+on_ft = 'typescript'
+
+[[plugins]]
+repo = 'mhartington/nvim-typescript'
+on_if = "has('nvim')"
+on_ft = 'typescript'
+
+[[plugins]]
+repo = 'fatih/vim-go'
+on_ft = 'go'
+hook_add = '''
+  let g:go_bin_path = expand('~/.go/bin')
+  let g:go_disable_autoinstall = 0
+  
+  let g:go_highlight_functions = 1
+  let g:go_highlight_methods = 1
+  let g:go_highlight_structs = 1
+  let g:go_highlight_operators = 1
+  let g:go_highlight_build_constraints = 1
+  let g:go_fmt_command = "goimports"
+  let g:go_fmt_fail_silently = 1
+  let g:go_get_update = 0 " Disable updating dependencies
+  let g:go_snippet_engine = 'neosnippet'
+'''
+
+[[plugins]]
+repo = 'luochen1990/rainbow'
+on_event = 'BufEnter'
+hook_add = 'let g:rainbow_active = 1'
+
+[[plugins]]
+repo = 'rust-lang/rust.vim'
+on_ft = 'rust'
+hook_source = 'let g:rustfmt_autosave = 0'
+
+[[plugins]]
+repo = 'rhysd/rust-doc.vim'
+on_ft = 'rust'
+on_cmd = 'RustDoc'
+
+[[plugins]]
+repo = 'rhysd/vim-gfm-syntax'
+on_ft = 'markdown'
+
+[[plugins]]
+repo = 'plasticboy/vim-markdown'
+on_ft = 'markdown'
+
+[[plugins]]
+repo = 'joker1007/vim-markdown-quote-syntax'
+on_ft = 'markdown'
+
+[[plugins]]
+repo = 'mattn/vim-notification'
+if = '!has("nvim")'
+
+[[plugins]]
+repo = 'chrisbra/vim-zsh'
+on_ft = 'zsh'
+
+[[plugins]]
+repo = 'udalov/kotlin-vim'
+on_ft = 'kotlin'
+
+[[plugins]]
+repo = 'shawncplus/phpcomplete.vim'
+on_ft = 'php'
+
+[[plugins]]
+repo = 'hynek/vim-python-pep8-indent'
+on_ft = 'python'
+
+[[plugins]]
+repo = 'JesseKPhillips/d.vim'
+on_ft = 'd'
+
+[[plugins]]
+repo = 'vim-ruby/vim-ruby'
+on_ft = 'ruby'
+
+[[plugins]]
+repo = 'rhysd/vim-textobj-ruby'
+on_ft = 'ruby'
+
+[[plugins]]
+repo = 'kchmck/vim-coffee-script'
+on_ft = 'coffee'
+
+[[plugins]]
+repo = 'rhysd/vim-crystal'
+on_ft = 'crystal'
+
+[[plugins]]
+repo = 'chrisbra/csv.vim'
+on_ft = 'csv'
+
+[[plugins]]
+repo = 'vim-erlang/vim-erlang-runtime'
+on_ft = 'erlang'
+
+[[plugins]]
+repo = 'vim-erlang/vim-erlang-omnicomplete'
+on_ft = 'erlang'
+
+[[plugins]]
+repo = 'vim-erlang/vim-erlang-compiler'
+on_ft = 'erlang'
+
+[[plugins]]
+repo = 'vim-erlang/vim-erlang-tags'
+on_ft = 'erlang'
+on_cmd = 'ErlangTags'
+
+[[plugins]]
+repo = 'elixir-editors/vim-elixir'
+on_ft = 'elixir'
+
+[[plugins]]
+repo = 'lfex/vim-lfe'
+on_ft = 'lfe'
+
+[[plugins]]
+repo = 'zah/nim.vim'
+on_ft = 'nim'
+
+[[plugins]]
+repo = 'davidhalter/jedi-vim'
+on_ft = 'python'
+
+[[plugins]]
+repo = 'python-mode/python-mode'
+on_ft = 'python'
+
+[[plugins]]
+repo = 'tpope/vim-bundler'
+on_ft = 'ruby'
+
+[[plugins]]
+repo = 'tpope/vim-rails'
+on_cmd = 'Rails'
+on_ft = 'ruby'
+
+[[plugins]]
+repo = 'tpope/vim-rake'
+on_cmd = 'Rake'
+on_ft = 'ruby'
+
+[[plugins]]
+repo = 'clojure-vim/clojure.vim'
+on_ft = 'clojure'
+
+[[plugins]]
+repo = 'ludovicchabant/vim-gutentags'
+hook_add = '''
+  let g:gutentags_project_root = ['.git', '.root', '.project']
+  let g:gutentags_ctags_tagfile = '.tags'
+  let g:gutentags_cache_dir = expand('~/.cache/tags')
+'''
+
+[[plugins]]
+repo = 'mhinz/vim-signify'
+on_cmd = 'SignifyToggle'
+
+[[plugins]]
+repo = 'chrisbra/NrrwRgn'
+on_cmd = ['NR', 'NW', 'WR', 'NRV', 'NUD', 'NRP']
+
+[[plugins]]
+repo = 'tpope/vim-speeddating'
+on_cmd = 'SpeedDatingFormat'
+
+[[plugins]]
+repo = 'jceb/vim-orgmode'
+depends = 'vim-speeddating'
+on_ft = 'org'
+
+[[plugins]]
+repo = 'voldikss/vim-floaterm'
+on_cmd = ['FloatermNew', 'FloatermPrev', 'FloatermNext', 'FloatermToggle']
+
+[[plugins]]
+repo = 'dense-analysis/ale'
+on_event = ['BufWritePre']
+on_cmd = 'ALEEnable'
+hooks_file = "$INIT_DIR/plugin/ale.vim"
+
+[[plugins]]
+repo = 'vlime/vlime'
+on_ft = 'lisp'
+
+[[plugins]]
+repo = 'vim-test/vim-test'
+on_cmd = ['TestFile', 'TestSuite']
+
+[[plugins]]
+repo = 'habamax/vim-godot'
+on_cmd = ['GodotRun', 'GodotRunCurrent']
+on_ft = 'gdscript'
+
+[[plugins]]
+repo = 'neoclide/jsonc.vim'
+on_ft = 'jsonc'
+
+# presse > to create new line
+[[plugins]]
+repo = 'alvan/vim-closetag'
+on_ft = ['html', 'xml']
+
+[[plugins]]
+repo = 'liuchengxu/vista.vim'
+on_cmd = ['Vista', 'Vista!', 'Vista!!']
+hook_source = '''
+let g:vista_default_executive = 'coc'
+'''
+
+# run shell in async
+[[plugins]]
+repo = 'skywind3000/asyncrun.vim'
+on_cmd = 'AsyncRun'
+
+[[plugins]]
+repo = 'skywind3000/asynctasks.vim'
+on_cmd = 'AsyncTask'
+
+[[plugins]]
+repo = 'hashivim/vim-terraform'
+on_cmd = 'Terraform'
+
+[[plugins]]
+repo = 'lambdalisue/vim-manpager'
+on_cmd = ['Man', 'ASMANPAGER']
+
+[[plugins]]
+repo = 'gw31415/mkdir.vim'
+on_event = "BufWritePre"
+
+[[plugins]]
+repo = 'chr4/nginx.vim'
+on_ft = 'nginx'
+
+[[plugins]]
+repo = 'wlemuel/vim-tldr'
+on_cmd = ['Tldr', 'TldrUpdateDocs']
+
+[[plugins]]
+repo = 'mhinz/vim-lookup'
+on_func = 'lookup#lookup'
+
+[[plugins]]
+repo = 'simeji/winresizer'
+on_cmd = ['WinResizerStartResize', 'WinResizerStartMove', 'WinResizerStartFocus']
+
+[[plugins]]
+repo = 'AndrewRadev/linediff.vim'
+on_cmd = 'LineDiff'
+
+[[plugins]]
+repo = 'markonm/traces.vim' 
+on_event = 'CmdlineEnter'
+
+[[plugins]]
+repo = 'liuchengxu/vim-which-key'
+on_cmd = 'WhichKey'
+
+[[plugins]]
+repo = 'puremourning/vimspector'
+on_cmd = ['VimspectorContinue']
+
+#[[plugins]]
+#repo = 'girishji/autosuggest.vim'
+
+[[plugins]]
+repo = 'preservim/vim-pencil'
+on_cmd = ['Pencil', 'PencilToggle']
+
+[[plugins]]
+repo = 'glidenote/memolist.vim'
+on_cmd = ['MemoNew', 'MemoList', 'MemoGrep']
+hook_source = 'let g:memolist_path = "~/Documents/memolist"'
+
+[[plugins]]
+repo = 'pechorin/any-jump.vim'
+on_cmd = ['AnyJump', 'AnyJumpVisual', 'AnyJumpBack', 'AnyJumpLastResults']
+
+[[plugins]]
+repo = 'dstein64/vim-startuptime'
+on_cmd = 'StartupTime'
+
+[[plugins]]
+repo = 'dstein64/vim-win'
+on_cmd = 'Win'
+
+[[plugins]]
+repo = 'Shougo/echodoc.vim'
+on_event = 'InsertEnter'
+hook_source = '''
+  call echodoc#enable()
+  let g:echodoc#type = has('nvim') ? 'floating' : 'popup'
+'''
+
+# Enhanced multi-file search
+[[plugins]]
+repo = 'wincent/ferret'
+on_cmd = ['Ack']
+
+[[plugins]]
+repo = 'wincent/corpus'
+on_cmd = ['Corpus']
+
+[[plugins]]
+repo = 'jreybert/vimagit'
+on_cmd = 'Magit'
+
+[[plugins]]
+repo = 'perillo/qbe.vim'
+on_ft = 'qbe'
+
+[[plugins]]
+repo = 'peterhoeg/vim-qml'
+on_ft = 'qml'
+
+[[plugins]]
+repo = 'wellle/context.vim'
+on_cmd = ['ContextToggle']
+
