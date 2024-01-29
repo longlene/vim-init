@@ -1,3 +1,0 @@
-if 1
-  execute 'source' fnamemodify(expand('<sfile>'), ':h').'/init/vimrc'
-endif
