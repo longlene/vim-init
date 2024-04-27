@@ -19,19 +19,14 @@ on_if = "!has('nvim')"
 repo = 'roxma/nvim-yarp'
 on_func = 'yarp'
 
-[[plugins]]
-repo = 'cespare/vim-toml'
-
-## coc
-[[plugins]]
+[[plugins]] # coc
 repo = 'neoclide/coc.nvim'
-merged = 0
+merged = false
 rev = 'release'
 on_i = 1
 hooks_file = "$INIT_DIR/plugin/coc.vim"
 
-### asyncomplete
-#[[plugins]]
+#[[plugins]] # asyncomplete
 #repo = 'prabirshrestha/async.vim'
 #
 #[[plugins]]
@@ -79,24 +74,20 @@ fern = '''
 
 [[plugins]]
 repo = 'vim-jp/vital.vim'
-merged = 0
+merged = false
 
-#[[plugins]]
-#repo = 'guns/vim-sexp'
-
-# additional configuration for vim
-[[plugins]]
+[[plugins]] # additional configuration for vim
 repo = 'tpope/vim-sensible'
 
-## status line
-[[plugins]]
+[[plugins]] # status line
 repo = 'itchyny/lightline.vim'
 hooks_file = "$INIT_DIR/plugin/lightline.lua"
-#hooks_file = "$INIT_DIR/plugin/lightline.vim"
 
-## theme
-[[plugins]]
+[[plugins]] # theme
 repo = 'tomasiser/vim-code-dark'
+
+[[plugins]]
+repo = 'catppuccin/nvim'
 
 [[plugins]]
 repo = 'liuchengxu/space-vim-dark'

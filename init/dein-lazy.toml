@@ -18,7 +18,7 @@ repo = 'kana/vim-textobj-user'
 [[plugins]]
 repo = 'kana/vim-textobj-entire'
 depends = 'vim-textobj-user'
-on_map = {'ox' = '<Plug>(textobj-entire'}
+on_map = {ox = ['ie', 'ae']}
 
 [[plugins]]
 repo = 'kana/vim-textobj-line'
@@ -30,10 +30,9 @@ repo = 'preservim/vim-textobj-quote'
 depends = 'vim-textobj-user'
 on_map = {'ox' = '<Plug>(textobj-quote'}
 
-# Auto close parentheses
-[[plugins]]
+[[plugins]] # Auto close parentheses
 repo = 'cohama/lexima.vim'
-on_event = 'InsertEnter'
+on_event = ['InsertEnter', 'CmdlineEnter']
 
 [[plugins]]
 repo = 'Yggdroot/indentLine'
@@ -46,7 +45,7 @@ on_ft = 'cpp'
 
 [[plugins]]
 repo = 'dkarter/bullets.vim'
-on_ft = ['markdown', 'gitcommit']
+on_ft = ['markdown', 'gitcommit', 'text']
 
 [[plugins]]
 repo = 'terryma/vim-expand-region'
@@ -104,7 +103,6 @@ depends = 'vim-fugitive'
 on_cmd = ['Flog', 'FlogSplit']
 
 [[plugins]]
-#repo = 'mattn/calendar-vim'
 repo = 'itchyny/calendar.vim'
 on_cmd = 'Calendar'
 
@@ -136,10 +134,6 @@ on_cmd = ['BufExplorer', 'BufExplorerHorizontalSplit', 'BufExplorerVerticalSplit
 [[plugins]]
 repo = 'dhruvasagar/vim-table-mode'
 on_cmd = ['TableModeToggle', 'Tableize', 'TableAddFormula', 'TableEvalFormulaLine', 'TableSort']
-
-#[[plugins]]
-#repo = 'bhurlow/vim-parinfer'
-#on_ft = 'lisp'
 
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
@@ -544,6 +538,7 @@ hooks_file = "$INIT_DIR/plugin/ale.vim"
 [[plugins]]
 repo = 'vlime/vlime'
 on_ft = 'lisp'
+rtp = 'vim'
 
 [[plugins]]
 repo = 'vim-test/vim-test'
